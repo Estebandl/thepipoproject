@@ -1,0 +1,21 @@
+<?php $error=""; if(isset($_GET["error"])){ $error="Usuario o contraseña incorrecto"; } ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+
+	<form action="php/login.php" method="post">
+		<input type="text" id="usuari" placeholder="Nom d'usuari" required> 
+		<input type="password" id="password" placeholder="Contrasenya" required>
+		<button type="submit">Login</button>
+	</form>
+	<div>
+		<?php echo $error; ?>
+	</div>
+
+</body>
+</html>
