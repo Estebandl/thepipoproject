@@ -1,13 +1,12 @@
 <?php
-
     include('connect.php');
 
     $usuari = $_POST['usuari'];
     $password = $_POST['password'];
-    $passwd="";
+    $passwd = "";
     $encriptada=md5($password);
 
-    if ($stmt = $conexion->prepare('SELECT password FROM users WHERE user = ?')){
+    if ($stmt = $conexion->prepare('SELECT password FROM users WHERE user = ?')){ //Query con prevención de inyección SQL
         $stmt->bind_param("s", $usuari);
         $stmt->execute();
         $result = $stmt->get_result();
@@ -17,11 +16,13 @@
         }
 
         $stmt->close();
+
     }
 
-    if ($encriptada == $passwd) {
-        header('Location: #');
-    } else {
-        header('Location: ../index.html?error=yes');
-    }
+if ($encriptada == $passwd) { //Comprovació de la contrasenya encriptada amb la introduida
+    header('Location: #');
+} else {
+
+}
+
 ?>
