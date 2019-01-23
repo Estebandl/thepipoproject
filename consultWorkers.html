@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Consultar Empleats</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <script src="js/consultWorkers.js"></script>
+</head>
+<body>
+    <form role="form" method="post" action="php/consultWorkers.php">
+        <label>Introdueix el DNI de l'empleat desitjat:</label>
+        <input type="text" name="dni"/>
+        <input type="submit" name="consult"/>
+
+        <table style="visibility: hidden;" id="tableWorkers">
+            <tr>
+                <td>Nom:</td>
+                <td id="name"></td>
+            </tr>
+            <tr>
+                <td>Cognom1:</td>
+                <td id="fSurname"></td>
+            </tr>
+            <tr>
+                <td>Cognom2:</td>
+                <td id="sSurname"></td>
+            </tr>
+            <tr>
+                <td>DNI:</td>
+                <td id="dni"></td>
+            </tr>
+            <tr>
+                <td>Data naixement: dd-mm-aaaa</td>
+                <td id="bDate"></td>
+            </tr>
+            <tr>
+                <td>Sexe (Home/Dona)</td>
+                <td id="sex"></td>
+            </tr>
+            <tr>
+                <td>Nacionalitat:</td>
+                <td id="country"></td>
+            </tr>
+            <tr>
+                <td>Adreça (Via/nom_carrer/núm /pis/porta)</td>
+                <td id="adress"></td>
+            </tr>
+            <tr>
+                <td>Codi postal: XXXXX</td>
+                <td id="postal"></td>
+            </tr>
+            <tr>
+                <td>Població</td>
+                <td id="poblation"></td>
+            </tr>
+            <tr>
+                <td>Telèfon personal</td>
+                <td id="phoneNum"></td>
+            </tr>
+            <tr>
+                <td>Mail personal</td>
+                <td id="email"></td>
+            </tr>
+            <tr>
+                <td>Formació:</td>
+                <td id="work"></td>
+            </tr>
+            <tr>
+                <td>Disminució: (Percentatge)</td>
+                <td id="dismunuation"></td>
+            </tr>
+            <tr>
+                <td>Compte bancari: IBAN</td>
+                <td id="iban"></td>
+            </tr>
+            <tr>
+                <td>Número Seguretat Social</td>
+                <td id="ssc"></td>
+            </tr>
+            <tr>
+                <td>Telèfon contacte avís emergències</td>
+                <td id="emergTel"></td>
+            </tr>
+            <tr>
+                <td>Nom contacte avís emergències</td>
+                <td id="emergName"></td>
+            </tr>
+            <tr>
+                <td>Data alta: dd-mm-aaaa</td>
+                <td id="startDate"></td>
+            </tr>
+            <tr>
+                <td>Data baixa: dd-mm-aaaa</td>
+                <td id="endDate"></td>
+            </tr>
+            <tr>
+                <td>Venciment contracte: dd-mm-aaaa</td>
+                <td id="contractEnd"></td>
+            </tr>
+            <tr>
+                <td>Tipus de contracte</td>
+                <td id="contractType"></td>
+            </tr>
+            <tr>
+                <td>Grup de cotització</td>
+                <td id="cotitGroup"></td>
+            </tr>
+            <tr>
+                <td>Informació nómina</td>
+                <td id="nominInf"></td>
+            </tr>
+            <tr>
+                <td>Excedència voluntària data inici:</td>
+                <td id="startDateEx"></td>
+            </tr>
+            <tr>
+                <td>Telèfon feina</td>
+                <td id="workTel"></td>
+            </tr>
+            <tr>
+                <td>Mail feina</td>
+                <td id="workEmail"></td>
+            </tr>
+            <tr>
+                <td>Àrea assignada</td>
+                <td id="assignArea"></td>
+            </tr>
+            <tr>
+                <td>Responsable</td>
+                <td id="resp"></td>
+            </tr>
+            <tr>
+                <td>Projecte assignat</td>
+                <td id="assingProj"></td>
+            </tr>
+            <tr>
+                <td>Lloc físic de treball</td>
+                <td id="workPlace"></td>
+            </tr>
+            <tr>
+                <td>Horari</td>
+                <td id="schedule"></td>
+            </tr>
+            <tr>
+                <td>Jornada setmanal</td>
+                <td id="weekSchedule"></td>
+            </tr>
+            <tr>
+                <td>Funció / Càrrec</td>
+                <td id="workPosition"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

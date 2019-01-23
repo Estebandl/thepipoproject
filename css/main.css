@@ -1,0 +1,22 @@
+body {
+    background-color: #ECECEC;
+}
+
+#tableWorkers {
+    font-size: 12px;
+    text-align: center;
+}
+
+#containerWorkersExtra {
+    display: flex;
+    justify-content: center;
+}
+
+#tableWorkersExtra {
+    text-align: center;
+}
+
+table, td {
+    border: 1px solid #000000;
+    border-collapse: collapse;
+}
