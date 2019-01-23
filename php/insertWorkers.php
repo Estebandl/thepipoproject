@@ -2,7 +2,41 @@
 session_start();
 
 if(isset($_POST['enviar'])) {
-   header('location: insertWorkersData.php');
+        
+        $_SESSION['nom'] = $_POST['nom'];
+        $_SESSION['primerCognom'] = $_POST['primerCognom'];
+        $_SESSION['segonCognom'] = $_POST['segonCognom'];
+        $_SESSION['dataNaixament'] = $_POST['dataNaixament'];
+        $_SESSION['sexe'] = $_POST['sexe'];
+        $_SESSION['nacionalitat'] = $_POST['nacionalitat'];
+        $_SESSION['adreça'] = $_POST['adreça'];
+        $_SESSION['codiPostal'] = $_POST['codiPostal'];
+        $_SESSION['poblacio'] = $_POST['poblacio'];
+        $_SESSION['telefonPersonal'] = $_POST['telefonPersonal'];
+        $_SESSION['email'] = $_POST['email'];
+        $_SESSION['formacio'] = $_POST['formacio'];
+        $_SESSION['disminucio'] = $_POST['disminucio'];
+        $_SESSION['compteBancari'] = $_POST['compteBancari'];
+        $_SESSION['numeroSeguretatSocial'] = $_POST['numeroSeguretatSocial'];
+        $_SESSION['telfEmergencia'] = $_POST['telfEmergencia'];
+        $_SESSION['nomEmergencia'] = $_POST['nomEmergencia'];
+        $_SESSION['dataAlta'] = $_POST['dataAlta'];
+        $_SESSION['vencimentContracte'] = $_POST['vencimentContracte'];
+        $_SESSION['tipusContracte'] = $_POST['tipusContracte'];
+        $_SESSION['grupCotitzacio'] = $_POST['grupCotitzacio'];
+        $_SESSION['infoNomina'] = $_POST['infoNomina'];
+        $_SESSION['telefonFeina'] = $_POST['telefonFeina'];
+        $_SESSION['correuFeina'] = $_POST['correuFeina'];
+        $_SESSION['area'] = $_POST['area'];
+        $_SESSION['responsable'] = $_POST['responsable'];
+        $_SESSION['projecte'] = $_POST['projecte'];
+        $_SESSION['llocFisicTreball'] = $_POST['llocFisicTreball'];
+        $_SESSION['horaInici'] = $_POST['horaInici'];
+        $_SESSION['horaFinal'] = $_POST['horaFinal'];
+        $_SESSION['jornadaSetmanal'] = $_POST['jornadaSetmanal'];
+        $_SESSION['funcioCarrec'] = $_POST['funcioCarrec'];   
+
+        header('location: insertWorkersData.php');
 }
 
 ?>
@@ -100,7 +134,7 @@ if(isset($_POST['enviar'])) {
                 <input type="number" name="telfEmergencia" value="">
                 <br><br>
                 
-                <label for="nomemergencia">Nom del contacte d'emergencia: </label>
+                <label for="nomEmergencia">Nom del contacte d'emergencia: </label>
                 <input type="text" name="nomEmergencia" value="">
                 <br><br>
                 
