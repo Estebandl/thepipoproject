@@ -4,6 +4,7 @@ session_start();
 if(isset($_POST['enviar'])) {
         
         $_SESSION['nom'] = $_POST['nom'];
+        $_SESSION['dni'] = $_POST['dni'];
         $_SESSION['primerCognom'] = $_POST['primerCognom'];
         $_SESSION['segonCognom'] = $_POST['segonCognom'];
         $_SESSION['dataNaixament'] = $_POST['dataNaixament'];
@@ -12,21 +13,10 @@ if(isset($_POST['enviar'])) {
         $_SESSION['adreça'] = $_POST['adreça'];
         $_SESSION['codiPostal'] = $_POST['codiPostal'];
         $_SESSION['poblacio'] = $_POST['poblacio'];
-        $_SESSION['telefonPersonal'] = $_POST['telefonPersonal'];
-        $_SESSION['email'] = $_POST['email'];
         $_SESSION['formacio'] = $_POST['formacio'];
         $_SESSION['disminucio'] = $_POST['disminucio'];
         $_SESSION['compteBancari'] = $_POST['compteBancari'];
         $_SESSION['numeroSeguretatSocial'] = $_POST['numeroSeguretatSocial'];
-        $_SESSION['telfEmergencia'] = $_POST['telfEmergencia'];
-        $_SESSION['nomEmergencia'] = $_POST['nomEmergencia'];
-        $_SESSION['dataAlta'] = $_POST['dataAlta'];
-        $_SESSION['vencimentContracte'] = $_POST['vencimentContracte'];
-        $_SESSION['tipusContracte'] = $_POST['tipusContracte'];
-        $_SESSION['grupCotitzacio'] = $_POST['grupCotitzacio'];
-        $_SESSION['infoNomina'] = $_POST['infoNomina'];
-        $_SESSION['telefonFeina'] = $_POST['telefonFeina'];
-        $_SESSION['correuFeina'] = $_POST['correuFeina'];
         $_SESSION['area'] = $_POST['area'];
         $_SESSION['responsable'] = $_POST['responsable'];
         $_SESSION['projecte'] = $_POST['projecte'];
@@ -71,15 +61,13 @@ if(isset($_POST['enviar'])) {
                 <input type="text" name="dni" value="">
                 <br><br>
                 
-                <label for="dataNaixament">Data de naixement:</label>
-                <input type="date" name="dataNaixament" value="">
+                <label for="dataNaixament">Data de naixement (YYYY/MM/DD):</label>
+                <input type="text" name="dataNaixament" value="">
                 <br><br>
                 
                 <label for="sexe">Sexe: </label>
-                <SELECT>
-                        <option name="sexe" value="home" checked> Home<br>
-                        <option name="sexe" value="dona"> Dona<br>
-                </SELECT> 
+                <input type="radio" name="sexe" value="1">Home
+                <input type="radio" name="sexe" value="0">Dona
                 <br><br>
                 
                 <label for="nacionalitat">Nacionalitat: </label>
@@ -98,24 +86,8 @@ if(isset($_POST['enviar'])) {
                 <input type="text" name="poblacio" value="">
                 <br><br>
                 
-                <label for="telefonPersonal">Telèfon personal: </label>
-                <input type="number" name="telefonPersonal" value="">
-                <br><br>
-                
-                <label for="email">Correu electronic: </label>
-                <input type="text" name="email" value="">
-                <br><br>
-                
                 <label for="formacio">Formació: </label>
-                <SELECT>
-                        <option name="formacio" value="sense">Sense estudis<br>
-                        <option name="formacio" value="estudisprimaris">Estudis primaris<br>
-                        <option name="formacio" value="eso"> Educació Secundaria Obligatoria<br>
-                        <option name="formacio" value="bachillerat"> Bachillerat<br>
-                        <option name="formacio" value="cfgs"> Cicle Formatiu Grau Mitjá<br>
-                        <option name="formacio" value="cfgm"> Cicle Formatiu Grau Superior<br>
-                        <option name="formacio" value="uni"> Estudis Universitaris<br>
-                </SELECT>
+                <input type="text" name="formacio" value="">
                 <br><br>
                 
                 <label for="disminucio">Disminució (%): </label>
@@ -128,46 +100,6 @@ if(isset($_POST['enviar'])) {
                 
                 <label for="numeroSeguretatSocial">Numero de la Seguretat Social: </label>
                 <input type="text" name="numeroSeguretatSocial" value="">
-                <br><br>
-                
-                <label for="telfEmergencia">Telèfon d'emergencia: </label>
-                <input type="number" name="telfEmergencia" value="">
-                <br><br>
-                
-                <label for="nomEmergencia">Nom del contacte d'emergencia: </label>
-                <input type="text" name="nomEmergencia" value="">
-                <br><br>
-                
-                <label for="dataAlta">Data d'alta: </label>
-                <input type="date" name="dataAlta" value="">
-                <br><br>
-                
-                <label for="dataBaixa">Data de baixa: </label>
-                <input type="date" name="dataBaixa" value="">
-                <br><br>
-                
-                <label for="vencimentContracte">Venciment del contracte: </label>
-                <input type="date" name="vencimentContracte" value="">
-                <br><br>
-                
-                <label for="tipusContracte">Tipus de contracte: </label>
-                <input type="text" name="tipusContracte" value="">
-                <br><br>
-                
-                <label for="grupCotizacio">Grup de cotització: </label>
-                <input type="text" name="grupCotitzacio" value="">
-                <br><br>
-                
-                <label for="infoNomina">Informació de la nomina: </label>
-                <input type="text" name="infoNomina" value="">
-                <br><br>
-                
-                <label for="telefonFeina">Teléfon de la feina: </label>
-                <input type="number" name="teleFonfeina" value="">
-                <br><br>
-                
-                <label for="correuFeina">Correu electrónic de la feina: </label>
-                <input type="text" name="correuFeina" value="">
                 <br><br>
                 
                 <label for="area">Area asignada: </label>
@@ -198,7 +130,7 @@ if(isset($_POST['enviar'])) {
                 <input type="number" name="jornadaSetmanal" value="">
                 <br><br>
                 
-                <label for="funcioCarrec">Data de baixa: </label>
+                <label for="funcioCarrec">Funcio: </label>
                 <input type="text" name="funcioCarrec" value="">
                 <br><br>
                 
