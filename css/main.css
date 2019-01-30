@@ -25,3 +25,37 @@ table, td {
     border: 1px solid #000000;
     border-collapse: collapse;
 }
+
+.btn-sub {
+    background-color: #CCFE0F;
+    color: #000000;
+    padding: 8px 25px;
+    border: solid 0.25px black;
+}
+
+.btn-sub:hover {
+    background-color: #8EB223;
+    color: #FFFFFF;
+}
+
+.login-table {
+    margin-top: 150px;
+    border: solid 1px black;
+    padding: 100px 150px;
+    align-content: center;
+}
+
+.inner-addon {
+  position: relative;
+}
+.inner-addon .fas {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+.left-addon .fas {
+  left: 0px;
+}
+.left-addon input {
+  padding-left: 30px;
+}
