@@ -43,6 +43,8 @@ table, td {
 
 .btn-sub {
     background-color: #CCFE0F;
+    font-family: arial;
+    font-size: 1em;
     color: #000000;
     padding: 8px 25px;
     border: solid 0.25px black;

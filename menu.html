@@ -2,10 +2,17 @@
 <html>
 <head>
 	<title>SAO Prat</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-	<button type="submit" name="insertWorker" onclick="consultWorkers.html">Insertar Treballador</button>
-	<button type="submit" name="updateWorker" onclick="">Actualitzar Treballador</button>
-	<button type="submit" name=""></button>
+	<div class="container"><center>
+		<div class="row">
+			<div class="col-lg-12">
+				<button type="submit" class="btn-sub" name="lookWorker" onclick="location.href='consultWorkers.html'">Consultar</button>
+				<button type="submit" class="btn-sub" name="insertWorker" onclick="location.href='php/insertWorkers.php'">Insertar</button>
+				<button type="submit" class="btn-sub" name="updateWorker" onclick="">Actualitzar dades</button>
+			</div>
+		</div>
+	</center></div>
 </body>
 </html>
