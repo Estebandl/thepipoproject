@@ -28,7 +28,9 @@ $funcioCarrec = $_SESSION['funcioCarrec'];
 
 
 $sql = "INSERT INTO empleats 
-VALUES ('$dni', '$nom', '$primerCognom', '$segonCognom', '$dataNaixament' ,$sexe, '$nacionalitat', '$adreça', $codiPostal, '$poblacio', '$formacio', $disminucio, $compteBancari, $numeroSS, '$area', '$responsable', '$projecte', '$llocFisicTreball', $horaInici, $horaFinal, $jornadaSetmanal, '$funcioCarrec')";
+VALUES ('$dni', '$nom', '$primerCognom', '$segonCognom', '$dataNaixament' , $sexe, '$nacionalitat', '$adreça', $codiPostal, 
+        '$poblacio', '$formacio', $disminucio, '$compteBancari', '$numeroSS', '$area', '$responsable', '$projecte', 
+        '$llocFisicTreball', $horaInici, $horaFinal, $jornadaSetmanal, '$funcioCarrec')";
 
 if ($conexion->query($sql) === TRUE) {
     echo "Empleado añadido.";
