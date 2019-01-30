@@ -3,6 +3,7 @@
 
     $usuari = $_POST['usuari'];
     $password = $_POST['password'];
+
     $passwd = "";
     $encriptada=md5($password);
 
@@ -19,10 +20,10 @@
 
     }
 
-if ($encriptada == $passwd) { //Comprovació de la contrasenya encriptada amb la introduida
-    header('Location: #');
-} else {
+    if ($encriptada == $passwd) { //Comprovació de la contrasenya encriptada amb la introduida
+        header('Location: ../menu.html');
+    } else {
 
-}
+    }
 
 ?>
