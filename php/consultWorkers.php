@@ -1,5 +1,7 @@
 <?php
     function worker($dni) {
+        
+        print('<title>Consulta ' . $dni . '</title>');
 
         print('<link rel="stylesheet" type="text/css" media="screen" href="../css/main.css"/>');
 
@@ -8,20 +10,23 @@
 		if ($conexion) {
 			$db = $conexion->select_db(DB_DATABASE);
 			if ($db) {
-				$consulta = "SELECT * FROM `empleats` WHERE dni = " . "'". $conexion->real_escape_string($dni) ."'";
+				$consulta = "SELECT * FROM `empleats` e, `telefons` t, `mails` m WHERE e.dni = t.dni_empleat AND e.dni = m.dni_empleat AND dni = " . "'". $conexion->real_escape_string($dni) ."'";
 
-				$resultado = $conexion->query($consulta);
+                $resultado = $conexion->query($consulta);
+                
+                $i = 0;
 
                 print('<div id="containerWorkers">');
 
                     print('<table id="tableWorkers">');
 
                     while ($fila = $resultado->fetch_assoc()) {
-
+                    if ($i === 0) {
+                        
                         print('<tr>');
                             print('<td>Nom:</td>');
                             print('<td id="name">');
-                            print($fila['nombre']);
+                            print($fila['nom']);
                             print('</td>');
                         print('</tr>');
                         print('<tr>');
@@ -150,7 +155,54 @@
                                 print($fila['funcio_carrec']);
                             print('</td>');
                         print('</tr>');
-                        
+                    
+                    print('</table>');
+                    $i++;
+                 }
+
+                print('</div>');
+
+                print('<hr/>');
+
+                print('<div id="containsWorkersExtra">');
+
+                    print('<table id="tableWorkersMobile">');
+
+                        print('<tr>');
+                            print('<td>Telefon:</td>');
+                            print('<td id="phone">');
+                            print($fila['telefon']);
+                            print('</td>');
+                        print('</tr>');
+                        print('<tr>');
+                            print('<td>Tipus de Telefon:</td>');
+                            print('<td id="tPhone">');
+                                print($fila['tipus_telefon']);
+                            print('</td>');
+                        print('</tr>');
+                        print('<tr>');
+                            print('<td>Nom de Contacte de Telefon:</td>');
+                            print('<td id="nPhone">');
+                                print($fila['nom_contacte_telefon']);
+                            print('</td>');
+                        print('</tr>');
+                    
+                    print('</table>');
+
+                    print('<table id="tableWorkersMail">');
+
+                        print('<tr>');
+                            print('<td>Mail:</td>');
+                            print('<td id="mail">');
+                            print($fila['mail']);
+                            print('</td>');
+                        print('</tr>');
+                        print('<tr>');
+                            print('<td>Tipus de Mail:</td>');
+                            print('<td id="tMail">');
+                                print($fila['cognom2']);
+                            print('</td>');
+                        print('</tr>');
                     }
                     
                     print('</table>');
@@ -161,19 +213,18 @@
 
 			} else {
 				print("Impossible connectar amb la base de dades.");
-			}
+            }
+
 		} else {
 			print("Impossible connectar amb el servidor.");
 		}
-	}
+    }
 
 	if (isset($_POST['consult'])) {
 		$dni = $_POST['dni'];
 
 		if (isset($dni)) {
             worker($dni);
-            print('<hr/>');
-            print('<button onClick="location.href = "../consultWorkers.html">Torna a Cercar</button>');
 		} else {
 			print("Torna a introduir el DNI.");
         }

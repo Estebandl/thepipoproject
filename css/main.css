@@ -2,12 +2,27 @@ body {
     background-color: #ECECEC;
 }
 
-#containerWorkers{
+#containerWorkers {
     display: flex;
     justify-content: center;
 }
 
 #tableWorkers {
+    font-size: 16px;
+    text-align: center;
+}
+
+#containsWorkersExtra {
+    display: flex;
+    justify-content: center;
+}
+
+#tableWorkersPhone {
+    font-size: 16px;
+    text-align: center;
+}
+
+#tableWorkersMail {
     font-size: 16px;
     text-align: center;
 }
