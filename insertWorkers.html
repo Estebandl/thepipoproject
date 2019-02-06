@@ -1,36 +1,3 @@
-<?php
-session_start();
-
-if(isset($_POST['enviar'])) {
-        
-        $_SESSION['nom'] = $_POST['nom'];
-        $_SESSION['dni'] = $_POST['dni'];
-        $_SESSION['primerCognom'] = $_POST['primerCognom'];
-        $_SESSION['segonCognom'] = $_POST['segonCognom'];
-        $_SESSION['dataNaixament'] = $_POST['dataNaixament'];
-        $_SESSION['sexe'] = $_POST['sexe'];
-        $_SESSION['nacionalitat'] = $_POST['nacionalitat'];
-        $_SESSION['adreça'] = $_POST['adreça'];
-        $_SESSION['codiPostal'] = $_POST['codiPostal'];
-        $_SESSION['poblacio'] = $_POST['poblacio'];
-        $_SESSION['formacio'] = $_POST['formacio'];
-        $_SESSION['disminucio'] = $_POST['disminucio'];
-        $_SESSION['compteBancari'] = $_POST['compteBancari'];
-        $_SESSION['numeroSeguretatSocial'] = $_POST['numeroSeguretatSocial'];
-        $_SESSION['area'] = $_POST['area'];
-        $_SESSION['responsable'] = $_POST['responsable'];
-        $_SESSION['projecte'] = $_POST['projecte'];
-        $_SESSION['llocFisicTreball'] = $_POST['llocFisicTreball'];
-        $_SESSION['horaInici'] = $_POST['horaInici'];
-        $_SESSION['horaFinal'] = $_POST['horaFinal'];
-        $_SESSION['jornadaSetmanal'] = $_POST['jornadaSetmanal'];
-        $_SESSION['funcioCarrec'] = $_POST['funcioCarrec'];   
-
-        header('location: insertWorkersData.php');
-}
-
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,7 +11,7 @@ if(isset($_POST['enviar'])) {
 <body>
                 <h1>Formulari d'introducció d'empleats</h1>
 
-                <form role="form" method="post" action="insertWorkers.php">
+                <form role="form" method="post" action="php/insertWorkersData.php">
 
                 <label for="nom">Nom</label><br>
                 <input type="text" name="nom" value="">
@@ -81,6 +48,23 @@ if(isset($_POST['enviar'])) {
                 
                 <label for="codiPostal">Codi postal</label><br>
                 <input type="number" name="codiPostal" value="">
+                <br><br>
+
+                <label for="email">Correu electrónic :</label><br>
+                <input type="text" name="email" value="">
+                <br><br>
+
+                <label for="tipusTelefon">Tipus de telèfon</label><br>
+                <input type="radio" name="tipusTelefon" value="1">Fixe
+                <input type="radio" name="tipusTelefon" value="0">Movil
+                <br><br>
+
+                <label for="telefonFixe">Telèfon :</label><br>
+                <input type="text" name="telefon" value="">
+                <br><br>
+
+                <label for="nomContacte">Nom del contacte :</label><br>
+                <input type="text" name="nomContacte" value="">
                 <br><br>
                 
                 <label for="poblacio">Població</label><br>
@@ -136,5 +120,8 @@ if(isset($_POST['enviar'])) {
                 <br><br><br>
                 
                 <button type="submit" name="enviar" value="enviar">Insertar empleat</button>
+
+                </form>
+
 </body>
 </html>
