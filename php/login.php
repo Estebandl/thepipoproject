@@ -21,7 +21,7 @@
     }
 
     if ($encriptada == $passwd) { //Comprovació de la contrasenya encriptada amb la introduida
-        header('Location: ../menu.html');
+        header('Location: ../menu.php');
     } else {
         echo "Error, el usuari o contrasenya es incorrecte";
     }
