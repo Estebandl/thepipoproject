@@ -8,6 +8,9 @@
         <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
         <script src="main.js"></script>
 </head>
+
+        <?php include 'php/webElements/header.php' ?>
+
 <body>
                 <h1>Formulari d'introducció d'empleats</h1>
 
