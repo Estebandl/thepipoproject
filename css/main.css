@@ -1,5 +1,6 @@
 body {
-    background-color: #ECECEC;
+    background-color: #ECECEC !important;
+    font-family: 'Nunito', sans-serif !important;
 }
 
 #containerWorkers {
@@ -75,4 +76,8 @@ table, td {
 }
 .left-addon input {
   padding-left: 30px;
+}
+
+.barranav {
+
 }
