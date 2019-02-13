@@ -1,4 +1,7 @@
 <?php
+
+    session_start();
+
     include('connect.php');
 
     $usuari = $_POST['usuari'];
@@ -21,6 +24,7 @@
     }
 
     if ($encriptada == $passwd) { //Comprovació de la contrasenya encriptada amb la introduida
+        $_SESSION['usuari'] = $usuari;
         header('Location: ../menu.php');
     } else {
         echo "Error, el usuari o contrasenya es incorrecte";
