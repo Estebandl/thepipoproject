@@ -4,76 +4,76 @@ body {
 }
 
 #containerWorkers {
-    display: flex;
-    justify-content: center;
+    display: flex !important;
+    justify-content: center !important;
 }
 
 #tableWorkers {
-    font-size: 16px;
-    text-align: center;
+    font-size: 16px !important;
+    text-align: center !important;
 }
 
 #containsWorkersExtra {
-    display: flex;
-    justify-content: center;
+    display: flex !important;
+    justify-content: center !important;
 }
 
 #tableWorkersPhone {
-    font-size: 16px;
-    text-align: center;
+    font-size: 16px !important;
+    text-align: center !important;
 }
 
 #tableWorkersMail {
-    font-size: 16px;
-    text-align: center;
+    font-size: 16px !important;
+    text-align: center !important;
 }
 
 #containerWorkersExtra {
-    display: flex;
-    justify-content: center;
+    display: flex !important;
+    justify-content: center !important;
 }
 
 #tableWorkersExtra {
-    text-align: center;
+    text-align: center !important;
 }
-*/
+
 table, td {
-    border: 1px solid #000000;
-    border-collapse: collapse;
+    border: 1px solid #000000 !important;
+    border-collapse: collapse !important;
 }
 
 .btn-sub {
-    background-color: #CCFE0F;
-    font-family: arial;
-    font-size: 1em;
-    color: #000000;
-    padding: 8px 25px;
-    border: solid 0.25px black;
+    background-color: #CCFE0F !important;
+    font-family: arial !important;
+    font-size: 1em !important;
+    color: #000000 !important;
+    padding: 8px 25px !important;
+    border: solid 0.25px black !important;
 }
 
 .btn-sub:hover {
-    background-color: #8EB223;
-    color: #FFFFFF;
+    background-color: #8EB223 !important;
+    color: #FFFFFF !important;
 }
 
 .login-table {
-    margin-top: 150px;
-    border: solid 1px black;
-    padding: 100px 150px;
-    align-content: center;
+    margin-top: 150px !important;
+    border: solid 1px black !important;
+    padding: 100px 150px !important;
+    align-content: center !important;
 }
 
 .inner-addon {
-  position: relative;
+  position: relative !important;
 }
 .inner-addon .fas {
-  position: absolute;
-  padding: 10px;
-  pointer-events: none;
+  position: absolute !important;
+  padding: 10px !important;
+  pointer-events: none !important;
 }
 .left-addon .fas {
-  left: 0px;
+  left: 0px !important;
 }
 .left-addon input {
-  padding-left: 30px;
+  padding-left: 30px !important;
 }
