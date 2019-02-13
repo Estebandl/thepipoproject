@@ -36,7 +36,7 @@ body {
 #tableWorkersExtra {
     text-align: center;
 }
-
+*/
 table, td {
     border: 1px solid #000000;
     border-collapse: collapse;
@@ -76,8 +76,4 @@ table, td {
 }
 .left-addon input {
   padding-left: 30px;
-}
-
-.barranav {
-
 }
