@@ -85,10 +85,10 @@ table, td {
     padding-top: 20px;
 }
 
-.container {
-    width: 100%;
-    height: auto;
-    padding-top: 20px;
+.modal-content {
+    width: 1500px !important;
+    height: auto !important;
+    display: inline-block !important;
 }
 
 .tablas {

@@ -13,7 +13,9 @@
 	<link rel="stylesheet" type="text/css" href="css/select2/select2.min.css">
 	<link rel="stylesheet" type="text/css" href="css/perfect-scrollbar/perfect-scrollbar.css">
 	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/mainTables.css">
+    <link rel="stylesheet" type="text/css" href="css/mainTables.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    
 </head>
 
 <?php
@@ -25,9 +27,16 @@
         <label style="margin-top: 8px;">Introdueix el DNI de l'empleat desitjat: <input type="text" name="dni" placeholder="DNI" style="border-radius: 25px; border: none !important;"/></label>
         <input type="submit" name="consult"/>
         <input type="submit" name="add" value="Insertar"/>
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#insertar">Open Modal</button>
+
     </form>
 
     <hr/>
+
+    <?php include 'insertWorkers.php' ?>
+    <script>
+    
+    </script>
 
     <?php
         if (isset($_POST['consult'])) {
