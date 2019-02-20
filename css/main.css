@@ -103,3 +103,7 @@ table, td {
     font-weight: bold;
 }
 
+.botonEnviar {
+    padding-bottom: 5px;
+}
+

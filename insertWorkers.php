@@ -129,8 +129,9 @@
         </div>
     </div>
         <center>
-        <button type="submit" class="btn btn-success" names="enviar" value="enviar">Insertar empleat</button>
+        <button type="submit" class="btn btn-success botonEnviar" names="enviar" value="enviar">Insertar empleat</button>
         </center>
+        <br>
         </form>
 
 </body>
