@@ -83,34 +83,33 @@
                         <div>
                                 <form role="form" method="post" action="updateWorkersData.php">
                                 <label for="nom">Nom</label><br>
-                                <input type="text" name="nom" value="<?php echo $nom ?>" disabled="disabled">
+                                <input type="text" name="nom" value="<?php echo $nom ?>" readonly>
 
                                 <br><br>
                                 
                                 <label for="primerCognom">1er Cognom</label><br>
-                                <input type="text" name="primerCognom" placeholder="" value="<?php echo $primerCognom ?>" disabled="disabled">
+                                <input type="text" name="primerCognom" placeholder="" value="<?php echo $primerCognom ?>" readonly>
                                 <br><br>
                                 
                                 <label for="segonCognom">2on Cognom</label><br>
-                                <input type="text" name="segonCognom" placeholder="" value="<?php echo $segonCognom ?>" disabled="disabled">
+                                <input type="text" name="segonCognom" placeholder="" value="<?php echo $segonCognom ?>" readonly>
                                 <br><br>
                                 
                                 <label for="dni">DNI</label><br>
-                                <input type="text" name="dni" placeholder="" value="<?php echo $dni ?>" disabled="disabled">
+                                <input type="text" name="dni" placeholder="" value="<?php echo $dni ?>" readonly>
                                 <br><br>
                                 
                                 <label for="dataNaixament">Data de naixement (DD/MM/AAAA)</label><br>
-                                <input type="text" name="dataNaixament" placeholder="" value="<?php echo $dataNaixament ?>" disabled="disabled">
+                                <input type="text" name="dataNaixament" placeholder="" value="<?php echo $dataNaixament ?>" readonly>
                                 <br><br>
                                 
-                                <label for="sexe">Sexe</label><br>
-                                
-                                <input type="radio" name="sexe" placeholder="1" <?php if ($sexe == 1) "checked"?> >Home
-                                <input type="radio" name="sexe" placeholder="0" <?php if ($sexe == 2) "checked"?> >Dona
+                                <label for="sexe">Sexe</label><br>                                
+                                <input type="radio" name="sexe" placeholder="1" readonly>Home
+                                <input type="radio" name="sexe" placeholder="0" readonly>Dona
                                 <br><br>
                                 
                                 <label for="nacionalitat">Nacionalitat</label><br>
-                                <input type="text" name="nacionalitat" placeholder="" value="<?php echo $nacionalitat ?>" disabled="disabled">
+                                <input type="text" name="nacionalitat" placeholder="" value="<?php echo $nacionalitat ?>" readonly>
                                 <br><br>
                                 
                                 <label for="adreça">Adreça</label><br>
@@ -127,8 +126,8 @@
                                 <br><br>
 
                                 <label for="tipusTelefon">Tipus de telèfon</label><br>
-                                <input type="radio" name="tipusTelefon" placeholder="1">Fixe
-                                <input type="radio" name="tipusTelefon" placeholder="0">Movil
+                                <input type="radio" name="tipusTelefon" placeholder="1" readonly>Fixe
+                                <input type="radio" name="tipusTelefon" placeholder="0" readonly>Movil
                                 <br><br>
 
                                 <label for="telefonFixe">Telèfon :</label><br>
