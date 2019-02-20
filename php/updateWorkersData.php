@@ -7,7 +7,7 @@ $dni = $_POST['dni'];
 $primerCognom =$_POST['primerCognom'];
 $segonCognom = $_POST['segonCognom'];
 $dataNaixament = $_POST['dataNaixament'];
-$sexe = $_POST['sexe'];
+//$sexe = $_POST['sexe'];
 $nacionalitat = $_POST['nacionalitat'];
 $adreça = $_POST['adreça'];
 $codiPostal = $_POST['codiPostal'];
@@ -27,7 +27,7 @@ $funcioCarrec = $_POST['funcioCarrec'];
 
 // TAULA TELEFON
 $telefon = $_POST['telefon'];
-$tipusTelefon = $_POST['tipusTelefon'];
+//$tipusTelefon = $_POST['tipusTelefon'];
 $nomContacte = $_POST['nomContacte'];
 
 //TAULA EMAIL
