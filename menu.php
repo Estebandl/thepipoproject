@@ -14,19 +14,19 @@
 <body>
 	
 	<div class="container"><center>
-		
+		Alerta alerta
 	</center></div>
 </body>
 
 	<script>
 		var usuari="";
-		if(localStorage.getItem('usuari')){
+		if (localStorage.getItem('usuari')){
 			usuari = localStorage.getItem('usuari');
-		}else{
+		} else {
 			if('<?php if(isset($_SESSION['usuari'])) echo $_SESSION['user'];?>'){
 				localStorage.setItem('usuari', '<?php if(isset($_SESSION['user'])) echo $_SESSION['user']?>');
 				usuari = localStorage.getItem('usuari');
-			}else{
+			} else {
 				location.href="index.php";
 			}
 		}
