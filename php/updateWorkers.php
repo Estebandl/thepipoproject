@@ -80,7 +80,7 @@
                 <h1>Formulari d'actualització d'empleats</h1>
 
                 <div class = "container">
-                        <div>
+                        <div class="tablas">
                                 <form role="form" method="post" action="updateWorkersData.php">
                                 <label for="nom">Nom</label><br>
                                 <input type="text" name="nom" value="<?php echo $nom ?>" readonly>
@@ -120,7 +120,7 @@
                                 <input type="number" name="codiPostal" placeholder="" value="<?php echo $codiPostal ?>">
                                 <br><br>
                         </div>
-                        <div>
+                        <div class="tablas">
                                 <label for="email">Correu electrónic :</label><br>
                                 <input type="text" name="email" placeholder="" value="<?php echo $email ?>"> 
                                 <br><br>
@@ -158,7 +158,7 @@
                                 <input type="text" name="numeroSeguretatSocial" placeholder="" value="<?php echo $numeroSS ?>">
                                 <br><br>
                         </div>
-                        <div>        
+                        <div class="tablas">   
                                 <label for="area">Area asignada</label><br>
                                 <input type="text" name="area" placeholder="" value="<?php echo $area ?>">
                                 <br><br>
