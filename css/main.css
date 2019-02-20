@@ -39,7 +39,6 @@ body {
 }
 
 table, td {
-    border: 1px solid #000000 !important;
     border-collapse: collapse !important;
 }
 
@@ -114,3 +113,6 @@ table, td {
     height: 50px;
 }
 
+.containerWorkers {
+    margin: 25px !important;
+}
