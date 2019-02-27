@@ -1,5 +1,6 @@
 <?php
-    include('php/connect.php');
+    include('php/connect.php');    
+    include ('php/updateWorkers.php');
 
     if ($conexion) {
         $db = $conexion->select_db(DB_DATABASE);
@@ -52,7 +53,7 @@
                                     print('<td id="actions" class="column6">');
                                         print('<i class="fas fa-address-card icons" style="padding: 5px;"></i>');
                                         print('<i class="fas fa-briefcase icons" style="padding: 5px;"></i>');
-                                        print('<i class="fas fa-pen icons" style="padding: 5px;"></i>');
+                                        print('<i class="fas fa-pen icons" data-toggle="modal" data-target="#modificar" style="padding: 5px;"></i>');
                                         print('<i class="fas fa-times icons" style="padding: 5px;"></i>');
                                     print('</td>');
                                 print('</tr>');

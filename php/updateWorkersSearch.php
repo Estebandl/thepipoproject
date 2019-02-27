@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
     <script src="js/consultWorkers.js"></script>
 </head>
+    <?php include 'webElements/header.php' ?>
 <body>
     <form role="form" method="post" action="updateWorkers.php">
         <label>Introdueix el DNI de l'empleat desitjat:</label>
