@@ -4,7 +4,7 @@
     if ($conexion) {
         $db = $conexion->select_db(DB_DATABASE);
         if ($db) {
-            $consulta = "SELECT e.dni, e.nom, e.cognom1, e.cognom2, e.data_naixement FROM `empleats` e, `telefons` t, `mails` m WHERE e.dni = t.dni_empleat AND e.dni = m.dni_empleat";
+            $consulta = "SELECT e.dni, e.nom, e.cognom1, e.cognom2, e.data_naixement, e.funcio_carrec FROM `empleats` e, `telefons` t, `mails` m WHERE e.dni = t.dni_empleat AND e.dni = m.dni_empleat";
 
             $resultado = $conexion->query($consulta);
             
@@ -16,12 +16,13 @@
                         print('<thead>');
 
                             print('<tr class="table100-head">');
-                                print('<td class="column1">DNI</td>');
-                                print('<td class="column2">Nom</td>');
-                                print('<td class="column3">Cognom1</td>');
-                                print('<td class="column4">Cognom2</td>');
-                                print('<td class="column5">Data naixement</td>');
-                                print('<td class="column6">Actions</td>');
+                                print('<th class="column1">DNI</th>');
+                                print('<th class="column2">Nom</th>');
+                                print('<th class="column3">Primer Cognom</th>');
+                                print('<th class="column4">Segon Cognom</th>');
+                                print('<th class="column4">Data naixement</th>');
+                                print('<th class="column5">Carrec</th>');
+                                print('<th class="column6">Actions</th>');
                             print('</tr>');
 
                             print('</thead>');
@@ -42,12 +43,15 @@
                                     print('<td id="sSurname" class="column4">');
                                         print($fila['cognom2']);
                                     print('</td>');
-                                    print('<td id="bDate" class="column5">');
+                                    print('<td id="bDate" class="column4">');
                                         print($fila['data_naixement']);
+                                    print('</td>');
+                                    print('<td id="fCarrec" class="column5">');
+                                        print($fila['funcio_carrec']);
                                     print('</td>');
                                     print('<td id="actions" class="column6">');
                                         print('<i class="fas fa-address-card icons" style="padding: 5px;"></i>');
-                                        print('<i class="fas fa-address-book icons" style="padding: 5px;"></i>');
+                                        print('<i class="fas fa-briefcase icons" style="padding: 5px;"></i>');
                                         print('<i class="fas fa-pen icons" style="padding: 5px;"></i>');
                                         print('<i class="fas fa-times icons" style="padding: 5px;"></i>');
                                     print('</td>');

@@ -1,3 +1,38 @@
+.icons {
+  cursor: pointer !important;
+}
+
+.icons:hover {
+  color: #ccff33;
+  cursor: pointer !important;
+}
+
+.send {
+  background-color: #ECECEC;
+  border-radius: 100px;
+  padding: 10px;
+}
+
+.send:hover {
+  background-color: #ccff33;
+  border-radius: 100px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.insertTo {
+  background-color: #ECECEC;
+  border-radius: 100px;
+  padding: 10px;
+}
+
+.insertTo:hover {
+  background-color: #ccff33;
+  border-radius: 100px;
+  cursor: pointer;
+  padding: 10px;
+}
+
 a {
 	margin: 0px;
 	transition: all 0.4s;
@@ -44,7 +79,7 @@ button {
 }
 
 button:hover {
-	cursor: pointer;
+	cursor: normal;
 }
 
 iframe {
@@ -120,10 +155,6 @@ table td.r, table th.r {
   text-align: center;
 }
 
-.icons:hover {
-  color: #ccff33;
-}
-
 .table100-head th{
   font-size: 18px;
   color: #fff;
@@ -145,7 +176,7 @@ tbody tr {
 tbody tr:hover {
   color: #555555;
   background-color: #f5f5f5;
-  cursor: pointer;
+  cursor: normal;
 }
 
 .column1 {

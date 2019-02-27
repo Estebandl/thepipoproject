@@ -18,12 +18,12 @@
                         print('<thead>');
 
                             print('<tr class="table100-head">');
-                                print('<td class="column1">DNI</td>');
-                                print('<td class="column2">Nom</td>');
-                                print('<td class="column3">Cognom1</td>');
-                                print('<td class="column4">Cognom2</td>');
-                                print('<td class="column5">Data naixement</td>');
-                                print('<td class="column6">Actions</td>');
+                                print('<th class="column1">DNI</th>');
+                                print('<th class="column2">Nom</th>');
+                                print('<th class="column3">Primer Cognom</th>');
+                                print('<th class="column4">Segon Cognom</th>');
+                                print('<th class="column5">Data naixement</th>');
+                                print('<th class="column6">Actions</th>');
                             print('</tr>');
 
                             print('</thead>');
@@ -49,7 +49,7 @@
                                     print('</td>');
                                     print('<td id="actions" class="column6">');
                                         print('<i class="fas fa-address-card icons" style="padding: 5px;"></i>');
-                                        print('<i class="fas fa-address-book icons" style="padding: 5px;"></i>');
+                                        print('<i class="fas fa-briefcase icons" style="padding: 5px;"></i>');
                                         print('<i class="fas fa-pen icons" style="padding: 5px;"></i>');
                                         print('<i class="fas fa-times icons" style="padding: 5px;"></i>');
                                     print('</td>');
