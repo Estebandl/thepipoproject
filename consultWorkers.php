@@ -13,7 +13,9 @@
 	<link rel="stylesheet" type="text/css" href="css/select2/select2.min.css">
 	<link rel="stylesheet" type="text/css" href="css/perfect-scrollbar/perfect-scrollbar.css">
 	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/mainTables.css">
+    <link rel="stylesheet" type="text/css" href="css/mainTables.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    
 </head>
 
 <?php
@@ -28,6 +30,11 @@
     </form>
 
     <hr/>
+
+    <?php include 'insertWorkers.php' ?>
+    <script>
+    
+    </script>
 
     <?php
         if (isset($_POST['consult'])) {
