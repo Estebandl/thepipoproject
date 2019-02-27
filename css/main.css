@@ -99,20 +99,40 @@ table, td {
 }
 
 .tablas {
-    padding: 25px;
+    padding: 15px 15px 15px 15px;
     margin-left: 87px;
     display: inline-block;
     font-size: 13px;
+}
+
+.tablas2 {
+    padding: 15px 15px 15px;
+    margin-left: 87px;
+    display: inline-block;
+    font-size: 13px;
+    padding-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .container label {
     font-weight: bold;
 }
 
+.container input {
+    border: 1px solid rgb(168, 163, 163) !important;
+}
+
 .botonEnviar {
-    padding-bottom: 5px;
+    margin-top: 20px !important;
+    margin-bottom: 50px !important;
+    margin-left: 460px;
 }
 
 .containerWorkers {
     margin: 25px !important;
+}
+
+#insertar {
+    padding-right: 600px !important;
+    padding-top: 50px; 
 }
