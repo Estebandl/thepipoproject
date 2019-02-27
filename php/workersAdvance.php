@@ -1,11 +1,12 @@
 <?php
-    include('php/connect.php');    
-    include ('php/updateWorkers.php');
+    include('php/connect.php');
+
+    $dni = $_POST['dniFocus'];
 
     if ($conexion) {
         $db = $conexion->select_db(DB_DATABASE);
         if ($db) {
-            $consulta = "SELECT e.dni, e.nom, e.cognom1, e.cognom2, e.data_naixement, e.funcio_carrec FROM `empleats` e, `telefons` t, `mails` m WHERE e.dni = t.dni_empleat AND e.dni = m.dni_empleat";
+            $consulta = "SELECT e.nom, e.cognom1, e.cognom2, e.data_naixement, e.funcio_carrec FROM `empleats` e, `telefons` t, `mails` m WHERE e.dni = t.dni_empleat AND e.dni = " . $conexion->real_escape_string($dni) ."";
 
             $resultado = $conexion->query($consulta);
             
@@ -17,13 +18,11 @@
                         print('<thead>');
 
                             print('<tr class="table100-head">');
-                                print('<th class="column1">DNI</th>');
-                                print('<th class="column2">Nom</th>');
-                                print('<th class="column3">Primer Cognom</th>');
-                                print('<th class="column4">Segon Cognom</th>');
+                                print('<th class="column1">Nom</th>');
+                                print('<th class="column2">Primer Cognom</th>');
+                                print('<th class="column3">Segon Cognom</th>');
                                 print('<th class="column4">Data naixement</th>');
                                 print('<th class="column5">Carrec</th>');
-                                print('<th class="column6">Actions</th>');
                             print('</tr>');
 
                             print('</thead>');
@@ -32,9 +31,6 @@
                             while ($fila = $resultado->fetch_assoc()) {
                                 
                                 print('<tr>');
-                                    print('<td id="dni" class="column1">');
-                                        print($fila['dni']);
-                                    print('</td>');
                                     print('<td id="name" class="column2">');
                                         print($fila['nom']);
                                     print('</td>');
@@ -50,16 +46,10 @@
                                     print('<td id="fCarrec" class="column5">');
                                         print($fila['funcio_carrec']);
                                     print('</td>');
-                                    print('<td id="actions" class="column6">');
-                                        print('<i class="fas fa-address-card icons" data-toggle="modal" data-target="#cercaCNT" style="padding: 5px;"></i>');
-                                        print('<i class="fas fa-briefcase icons" data-toggle="modal" data-target="#cercaADV" style="padding: 5px;"></i>');
-                                        print('<i class="fas fa-pen icons" data-toggle="modal" data-target="#modificar" style="padding: 5px;"></i>');
-                                        print('<i class="fas fa-times icons" style="padding: 5px;"></i>');
-                                    print('</td>');
                                 print('</tr>');
 
                             }
-                     
+                    
                         print('</tbody>');
 
                     print('</table>');
