@@ -36,9 +36,7 @@
             if ($_POST['dni'] != null) {
                 include("php/workersFiltros.php");
             } else {
-                print("<div style='text-align: center;>");
-                    print("<h1 style='text-transform: uppercase;'>No hay ningun trabajador con esos parametros.</h1>");
-                print("</div>");
+                include("php/workers.php");
             }
         } else {
             include("php/workers.php");
