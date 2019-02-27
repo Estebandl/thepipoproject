@@ -56,25 +56,32 @@ table, td {
     color: #FFFFFF !important;
 }
 
+/* Zona Login */
+
 .login-table {
-    margin-top: 150px !important;
-    border: solid 1px black !important;
-    padding: 100px 150px !important;
-    align-content: center !important;
+    margin-top: 15%;
+    border: solid 1px black;
+    padding: 100px 150px;
+    align-content: center;
+    width: 100%;
 }
 
-.inner-addon {
-  position: relative !important;
+.inner-addon { 
+    position: relative; 
 }
 
 .inner-addon .fas {
-  position: absolute !important;
-  padding: 10px !important;
-  pointer-events: none !important;
+    position: absolute;
+    padding: 10px;
+    pointer-events: none;
 }
 
-.left-addon .fas {
-  left: 0px !important;
+.left-addon .glyphicon  { 
+    left: 0px;
+}
+
+.left-addon input  { 
+    padding-left: 30px;
 }
 
 /*Formulario inscripccion*/
