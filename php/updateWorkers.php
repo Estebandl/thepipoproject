@@ -76,10 +76,11 @@
 
                 ?>
 
-                <h1>Formulari d'actualització d'empleats</h1>
+                
                 <div id="modificar" class="modal fade" role="dialog">
                         <div class="modal-dialog">
                                 <div class = "container modal-content">
+                                <h1>Formulari d'actualització d'empleats</h1>
                                         <div class="tablas">
                                                 <form role="form" method="post" action="updateWorkersData.php">
                                                 <label for="nom">Nom</label><br>
