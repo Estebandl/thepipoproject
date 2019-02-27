@@ -9,8 +9,6 @@
         <script src="main.js"></script>
 </head>
 
-        <?php include 'php/webElements/header.php' ?>
-
 <body>
 <div class="modal fade" id="insertar" role="dialog">  
     <div class="modal-dialog">

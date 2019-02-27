@@ -9,26 +9,26 @@
 
 .send {
   background-color: #ECECEC;
-  border-radius: 100px;
+  border-radius: 15px;
   padding: 10px;
 }
 
 .send:hover {
   background-color: #ccff33;
-  border-radius: 100px;
+  border-radius: 15px;
   cursor: pointer;
   padding: 10px;
 }
 
 .insertTo {
   background-color: #ECECEC;
-  border-radius: 100px;
+  border-radius: 15px;
   padding: 10px;
 }
 
 .insertTo:hover {
   background-color: #ccff33;
-  border-radius: 100px;
+  border-radius: 15px;
   cursor: pointer;
   padding: 10px;
 }
