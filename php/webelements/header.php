@@ -11,7 +11,7 @@
     <li><img class="imagen" src="img/logo.png" style="height: 20px;">
     <ul><br>
           <li><a class="colores" href="menu.php">Home</a></li><br>
-          <li><a class="colores" href="consultWorkers.html">Consulta</a></li>
+          <li><a class="colores" href="consultWorkers.php">Consulta</a></li>
         </ul>
     </li>
 
