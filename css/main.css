@@ -93,12 +93,13 @@ table, td {
 }
 
 .modal-content {
-    width: 1500px !important;
+    width: 1100px !important;
     height: auto !important;
     display: inline-block !important;
 }
 
 .tablas {
+    margin-top: 40px;
     padding: 15px 15px 15px 15px;
     margin-left: 87px;
     display: inline-block;
@@ -106,12 +107,11 @@ table, td {
 }
 
 .tablas2 {
-    padding: 15px 15px 15px;
+    margin-top: 40px;
+    padding: 15px 15px 15px 15px;
     margin-left: 87px;
     display: inline-block;
     font-size: 13px;
-    padding-bottom: 40px;
-    margin-bottom: 20px;
 }
 
 .container label {

@@ -45,11 +45,8 @@ VALUES ('$dni', '$telefon', '$tipusTelefon', '$nomContacte')";
 $sql3 = "INSERT INTO mails
 VALUES ('$dni', '$email', null)";
 
-
-if ($conexion->query($sql) == FALSE || $conexion->query($sql2) == FALSE || $conexion->query($sql3) == FALSE ) {
-    echo 'Error ' .$sql . "<br>" . $conexion->error;
-} else {
-    echo 'Empleado añadido correctamente';
-}
+$conexion->query($sql);
+$conexion->query($sql2);
+$conexion->query($sql3);
 
 ?>
