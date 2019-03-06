@@ -8,14 +8,14 @@
 <div id = "header">
 
     <ul class="nav">
-    <li><img class="imagen" src="img/logo.png"/ style="">
+    <li><img class="imagen" src="img/logo.png" style="height: 20px;">
     <ul><br>
-          <li><a class="colores" href="">Home</a></li><br>
+          <li><a class="colores" href="menu.php">Home</a></li><br>
           <li><a class="colores" href="consultWorkers.html">Consulta</a></li>
         </ul>
     </li>
 
-      <li><a class="margenes" href="">Benvingut/da, <?php echo $usuari ?></a></li>
+      <li><a class="margenes">Benvingut/da, <?php echo $usuari ?></a></li>
         <div><img class="apagado" src="img/icons/logout.png"/></div>
     </ul>
 
