@@ -25,17 +25,14 @@
     <form role="form" method="post" action="consultWorkers.php" style="display: flex; justify-content: space-between; margin-top: 15px; padding: 25px;">
         <label style="margin-top: 8px;">Introdueix el DNI de l'empleat desitjat: <input type="text" name="dni" placeholder="DNI" style="border-radius: 25px; border: none !important; padding-left: 10px;"/></label>
         <input type="submit" name="consult" value="Buscar" class="send"/>
-        <input type="submit" name="add" value="Insertar" class="insertTo"/>
+        <button type="button" class="insertTo" data-toggle="modal" data-target="#insertar">Insertar Empleado</button>
+        
     </form>
 
     <hr/>
 
-    <?php include 'insertWorkers.php' ?>
-    <script>
-    
-    </script>
-
-    <?php
+    <?php include('insertWorkers.php');
+        
         if (isset($_POST['consult'])) {
             if ($_POST['dni'] != null) {
                 include("php/workersFiltros.php");
@@ -46,6 +43,48 @@
             include("php/workers.php");
         }
     ?>
+
+    <!-- Modal -->
+    <div class="modal fade" id="cercaCNT" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="cercaCNTTitle">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="cercaADV" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="cercaADV">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+        </div>
+    </div>
+    </div>
 
     <script src="js/jquery/jquery-3.2.1.min.js"></script>
 	<script src="js/bootstrap/popper.js"></script>

@@ -6,34 +6,33 @@
         <title>Formulari d'introduccio d'empleats</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="css/main.css">
-        <script src="main.js"></script>
 </head>
 
 <body>
 <div class="modal fade" id="insertar" role="dialog">  
     <div class="modal-dialog">
-      <div class="container modal-content">
+      <div class="modal-content container">
             <div class="tablas">
                 <form role="form" method="post" action="php/insertWorkersData.php">
 
                 <label for="nom">Nom</label><br>
-                <input type="text" name="nom" value="">
+                <input type="text" name="nom" required>
                 <br><br>
                 
                 <label for="primerCognom">1er Cognom</label><br>
-                <input type="text" name="primerCognom" value="">
+                <input type="text" name="primerCognom" >
                 <br><br>
                 
                 <label for="segonCognom">2on Cognom</label><br>
-                <input type="text" name="segonCognom" value="">
+                <input type="text" name="segonCognom" >
                 <br><br>
                 
                 <label for="dni">DNI</label><br>
-                <input type="text" name="dni" value="">
+                <input type="text" name="dni" >
                 <br><br>
                 
                 <label for="dataNaixament">Data de naixement (DD/MM/AAAA)</label><br>
-                <input type="text" name="dataNaixament" value="">
+                <input type="text" name="dataNaixament" >
                 <br><br>
                 
                 <label for="sexe">Sexe</label><br>
@@ -42,21 +41,21 @@
                 <br><br>
                 
                 <label for="nacionalitat">Nacionalitat</label><br>
-                <input type="text" name="nacionalitat" value="">
+                <input type="text" name="nacionalitat" >
                 <br><br>
                 
                 <label for="adreça">Adreça</label><br>
-                <input type="text" name="adreça" value="">
+                <input type="text" name="adreça" >
                 <br><br>
 
                 <label for="codiPostal">Codi postal</label><br>
-                <input type="number" name="codiPostal" value="">
+                <input type="number" name="codiPostal" >
                 <br><br>
             </div>
 
             <div class="tablas">
                 <label for="email">Correu electrónic :</label><br>
-                <input type="text" name="email" value="">
+                <input type="text" name="email" >
                 <br><br>
 
                 <label for="tipusTelefon">Tipus de telèfon</label><br>
@@ -65,72 +64,69 @@
                 <br><br>
 
                 <label for="telefonFixe">Telèfon :</label><br>
-                <input type="text" name="telefon" value="">
+                <input type="text" name="telefon" >
                 <br><br>
 
                 <label for="nomContacte">Nom del contacte :</label><br>
-                <input type="text" name="nomContacte" value="">
+                <input type="text" name="nomContacte" >
                 <br><br>
                 
                 <label for="poblacio">Població</label><br>
-                <input type="text" name="poblacio" value="">
+                <input type="text" name="poblacio" >
                 <br><br>
                 
                 <label for="formacio">Formació</label><br>
-                <input type="text" name="formacio" value="">
+                <input type="text" name="formacio" >
                 <br><br>
                 
                 <label for="disminucio">Disminució (%)</label><br>
-                <input type="number" name="disminucio" value="">
+                <input type="number" name="disminucio" >
                 <br><br>
 
                 <label for="compteBancari">Compte bancari</label><br>
-                <input type="text" name="compteBancari" value="">
+                <input type="text" name="compteBancari" >
                 <br><br>
 
                 <label for="numeroSeguretatSocial">Numero de la Seguretat Social</label><br>
-                <input type="text" name="numeroSeguretatSocial" value="">
+                <input type="text" name="numeroSeguretatSocial" >
                 <br><br>
             </div>
 
-            <div class="tablas">
+            <div class="tablas2">
                 <label for="area">Area asignada</label><br>
-                <input type="text" name="area" value="">
+                <input type="text" name="area" >
                 <br><br>
                 
                 <label for="responsable">Responsable</label><br>
-                <input type="text" name="responsable" value="">
+                <input type="text" name="responsable" >
                 <br><br>
                 
                 <label for="projecte">Projecte assignat</label><br>
-                <input type="text" name="projecte" value="">
+                <input type="text" name="projecte" >
                 <br><br>
                 
                 <label for="llcoFisicTreball">Lloc fisic del treball</label><br>
-                <input type="text" name="llocFisicTreball" value="">
+                <input type="text" name="llocFisicTreball" >
                 <br><br>
                 
                 <label for="horaInici">Hora d'inici</label><br>
-                <input type="number" name="horaInici" value="">
+                <input type="number" name="horaInici" >
                 <br><br>
                 
                 <label for="horaFinal">Hora de finalització</label><br>
-                <input type="number" name="horaFinal" value="">
+                <input type="number" name="horaFinal" >
                 <br><br>
                 
                 <label for="jornadaSetmanal">Jornada setmanal</label><br>
-                <input type="number" name="jornadaSetmanal" value="">
+                <input type="number" name="jornadaSetmanal" >
                 <br><br>
                 
                 <label for="funcioCarrec">Funció</label><br>
-                <input type="text" name="funcioCarrec" value="">
-                <br><br><br>
+                <input type="text" name="funcioCarrec" >
             </div>
         </div>
-    </div>
-        <center>
         <button type="submit" class="btn btn-success botonEnviar" names="enviar" value="enviar">Insertar empleat</button>
-        </center>
+    </div>
         <br>
         </form>
         </div>
