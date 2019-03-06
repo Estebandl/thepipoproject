@@ -9,6 +9,8 @@
 
             $resultado = $conexion->query($consulta);
             
+            $index = 1;
+            $dniOld;
 
                 print('<div class="table100 containerWorkers">');
 
@@ -29,24 +31,31 @@
 
                             while ($fila = $resultado->fetch_assoc()) {
                                 
+                                if ($dniOld != $fila['dni']) {
+
                                 print('<tr>');
-                                    print('<td id="name" class="column2">');
+                                    print('<td id="name-'. $index . '" class="column2">');
                                         print($fila['nom']);
                                     print('</td>');
-                                    print('<td id="fSurname" class="column3">');
+                                    print('<td id="fSurname-'. $index . '" class="column3">');
                                         print($fila['cognom1']);
                                     print('</td>');
-                                    print('<td id="sSurname" class="column4">');
+                                    print('<td id="sSurname-'. $index . '" class="column4">');
                                         print($fila['cognom2']);
                                     print('</td>');
-                                    print('<td id="bDate" class="column4">');
+                                    print('<td id="bDate-'. $index . '" class="column4">');
                                         print($fila['data_naixement']);
                                     print('</td>');
-                                    print('<td id="fCarrec" class="column5">');
+                                    print('<td id="fCarrec-'. $index . '" class="column5">');
                                         print($fila['funcio_carrec']);
                                     print('</td>');
                                 print('</tr>');
 
+                                $dniOld = $fila['dni'];
+                                $index++;
+                                } else {
+                                    $dniOld = $fila['dni'];
+                                }
                             }
                     
                         print('</tbody>');

@@ -9,6 +9,8 @@
 
             $resultado = $conexion->query($consulta);
             
+            $index = 1;
+            $dniOld;
 
                 print('<div class="table100 containerWorkers">');
 
@@ -25,12 +27,19 @@
 
                             while ($fila = $resultado->fetch_assoc()) {
                                 
+                                if ($dniOld != $fila['dni']) {
+
                                 print('<tr>');
-                                    print('<td id="dni" class="column1">');
+                                    print('<td id="dni-'. $index . '" class="column1">');
                                         print($fila['dni']);
                                     print('</td>');
                                 print('</tr>');
 
+                                $dniOld = $fila['dni'];
+                                $index++;
+                                } else {
+                                    $dniOld = $fila['dni'];
+                                }
                             }
                     
                         print('</tbody>');
