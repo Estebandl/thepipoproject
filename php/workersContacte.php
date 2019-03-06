@@ -1,5 +1,5 @@
 <?php
-
+    include('php/connect.php');
     $dni = $_POST['dniFocus'];
 
     if ($conexion) {
@@ -9,6 +9,7 @@
 
             $resultado = $conexion->query($consulta);
             
+            $index = 1;
 
                 print('<div class="table100 containerWorkers">');
 
@@ -26,11 +27,12 @@
                             while ($fila = $resultado->fetch_assoc()) {
                                 
                                 print('<tr>');
-                                    print('<td id="dni" class="column1">');
+                                    print('<td id="dni-' . $index . '" class="column1">');
                                         print($fila['dni']);
                                     print('</td>');
                                 print('</tr>');
 
+                                $index++;
                             }
                     
                         print('</tbody>');
@@ -38,6 +40,8 @@
                     print('</table>');
 
                 print('</div>');
+
+            include('php/close.php');
 
         } else {
             print("Impossible connectar amb la base de dades.");
