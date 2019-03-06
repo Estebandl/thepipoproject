@@ -1,6 +1,5 @@
 <?php
-    include('php/connect.php');
-    include('php/updateWorkers.php');
+    include('php/connect.php');    
 
     if ($conexion) {
         $db = $conexion->select_db(DB_DATABASE);
