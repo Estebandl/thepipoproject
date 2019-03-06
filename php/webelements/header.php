@@ -18,5 +18,9 @@
       <li><a class="margenes">Benvingut/da, <?php echo $usuari ?></a></li>
         <div><img class="apagado" src="img/icons/logout.png"/></div>
     </ul>
+  </div>
+</nav>
 
-</div>
+<?php
+    include('php/connect.php');    
+?>
