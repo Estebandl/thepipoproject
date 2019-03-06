@@ -47,7 +47,7 @@
                                     print('<td id="bDate-' . $index . '" class="column5">');
                                         print($fila['data_naixement']);
                                     print('</td>');
-                                    print('<td id="actions-' . $index . '" class="column6">');
+                                    print('<td id="actions" class="column6">');
                                         print('<i class="fas fa-address-card icons" style="padding: 5px;"></i>');
                                         print('<i class="fas fa-briefcase icons" style="padding: 5px;"></i>');
                                         print('<i class="fas fa-pen icons" style="padding: 5px;"></i>');
