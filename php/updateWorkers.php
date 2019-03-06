@@ -1,7 +1,8 @@
 <?php
         //include('connect.php');
-        error_reporting(E_ALL ^ E_NOTICE);
-        $consulta = "SELECT * FROM `empleats` e, `telefons` t, `mails` m WHERE e.dni = t.dni_empleat AND e.dni = m.dni_empleat AND dni = " . "'". $conexion->real_escape_string($_POST['dni']) ."'";
+        //error_reporting(E_ALL ^ E_NOTICE);
+        $consulta = "SELECT * FROM `empleats` e, `telefons` t, `mails` m WHERE e.dni = t.dni_empleat AND e.dni = m.dni_empleat AND e.dni = " . "'". $conexion->real_escape_string($_POST['dni']) ."'";
+
         $resultado = $conexion->query($consulta);
 ?>
 
@@ -13,10 +14,10 @@
         <title>Formulari d'actualització d'empleats</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" />
-        <script src="main.js"></script>
+        <script src="../js/main.js"></script>
 </head>
 <body>
-        <?php while ($fila = $resultado->fetch_assoc()) {     
+        <?php while ($fila = $resultado->fetch_assoc()) {  
                 
                 $nom = $fila['nom'];
                 $dni = $fila['dni'];
@@ -75,15 +76,14 @@
                  $email;
 
                 ?>
-
+                <p><?php $dni ?></p>
                 
                 <div id="modificar" class="modal fade" role="dialog">
                         <div class="modal-dialog">
                                 <div class = "container modal-content">
-                                <h1>Formulari d'actualització d'empleats</h1>
                                         <div class="tablas">
-                                                <form role="form" method="post" action="updateWorkersData.php">
-                                                <label for="nom">Nom</label><br>
+                                                <form role="form" method="post" action="php/updateWorkersData.php">
+                                                <label for="nom">Nom </label><br>
                                                 <input type="text" name="nom" value="<?php echo $nom ?>" readonly>
 
                                                 <br><br>
@@ -132,7 +132,7 @@
                                                 <br><br>
 
                                                 <label for="telefonFixe">Telèfon :</label><br>
-                                                <input type="text" name="telefon" placeholder="" value="<?php echo $telefon ?>">
+                                                <input type="number" name="telefon" placeholder="" value="<?php echo $telefon ?>">
                                                 <br><br>
 
                                                 <label for="nomContacte">Nom del contacte :</label><br>
