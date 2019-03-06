@@ -31,7 +31,7 @@
     <hr/>
 
     <?php include('insertWorkers.php');
-        
+
         if (isset($_POST['consult'])) {
             if ($_POST['dni'] != null) {
                 include("php/workersFiltros.php");
@@ -54,7 +54,9 @@
             </button>
         </div>
         <div class="modal-body">
-            
+            <?php
+                include("php/workersContacte.php");
+            ?>
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -75,7 +77,9 @@
             </button>
         </div>
         <div class="modal-body">
-
+            <?php
+                //include("php/workersAdvance.php");
+            ?>
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

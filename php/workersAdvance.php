@@ -1,5 +1,4 @@
 <?php
-    include('php/connect.php');
 
     $dni = $_POST['dniFocus'];
 

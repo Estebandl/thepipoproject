@@ -23,3 +23,7 @@
     </ul>
   </div>
 </nav>
+
+<?php
+    include('php/connect.php');    
+?>

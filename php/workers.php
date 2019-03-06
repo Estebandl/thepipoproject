@@ -1,5 +1,4 @@
 <?php
-    include('php/connect.php');    
     include ('php/updateWorkers.php');
 
     if ($conexion) {
