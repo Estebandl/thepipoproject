@@ -9,6 +9,7 @@
 
             $resultado = $conexion->query($consulta);
             
+            $dniOld;
 
                 print('<div class="table100 containerWorkers">');
 
@@ -30,6 +31,8 @@
                             print('<tbody>');
 
                             while ($fila = $resultado->fetch_assoc()) {
+
+                                if ($dniOld != $fila['dni']) {
                                 
                                 print('<tr>');
                                     print('<td id="dni" class="column1">');
@@ -57,7 +60,10 @@
                                         print('<i class="fas fa-times icons" style="padding: 5px;"></i>');
                                     print('</td>');
                                 print('</tr>');
-
+                                $dniOld = $fila['dni'];
+                                } else {
+                                    $dniOld = $fila['dni'];
+                                }
                             }
                      
                         print('</tbody>');
