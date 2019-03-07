@@ -25,9 +25,13 @@
       <li class="nav-item">
         <a class="nav-link" href="consultWorkers.php">Consulta</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Gestió d'usuaris</a>
-      </li>
+      <?php
+      if($role == 1){
+        echo '<li class="nav-item">
+          <a class="nav-link" href="#">Gestió usuaris</a>
+        </li>';
+      }
+      ?>
     </ul>
   </div>
 </nav>
