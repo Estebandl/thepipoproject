@@ -1,5 +1,3 @@
-<?php session_start(); ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,8 +9,8 @@
 <body>
 <?php include('php/webelements/header.php') ?>
 	
-	<div class="container"><center>
-		Alerta alerta
+	<div class="container"><center><br><br><br><br>
+		<img src="img/404.png" style="width: 100%">
 	</center></div>
 </body>
 
