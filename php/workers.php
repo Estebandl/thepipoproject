@@ -9,7 +9,7 @@
             $resultado = $conexion->query($consulta);
             
             $index = 1;
-            $dniOld;
+            $dniOld = null;
 
                 print('<div class="table100 containerWorkers">');
 

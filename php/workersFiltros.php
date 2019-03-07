@@ -1,14 +1,16 @@
 <?php
-
+    include('php/updateWorkers.php');
     $dni = $_REQUEST['dni'];
 
     if ($conexion) {
         $db = $conexion->select_db(DB_DATABASE);
         if ($db) {
-            $consulta = "SELECT e.dni, e.nom, e.cognom1, e.cognom2, e.data_naixement FROM `empleats` e, `telefons` t, `mails` m WHERE e.dni = t.dni_empleat AND e.dni = m.dni_empleat AND dni = " . "'". $conexion->real_escape_string($dni) ."'";
+            $consulta = "SELECT e.dni, e.nom, e.cognom1, e.cognom2, e.data_naixement, e.funcio_carrec FROM `empleats` e, `telefons` t, `mails` m WHERE e.dni = t.dni_empleat AND e.dni = m.dni_empleat AND dni = " . "'". $conexion->real_escape_string($dni) ."'";
 
             $resultado = $conexion->query($consulta);
             
+            $index = 1;
+            $dniOld = null;
 
                 print('<div class="table100 containerWorkers">');
 
@@ -22,6 +24,7 @@
                                 print('<th class="column3">Primer Cognom</th>');
                                 print('<th class="column4">Segon Cognom</th>');
                                 print('<th class="column5">Data naixement</th>');
+                                print('<th class="column5">Carrec</th>');
                                 print('<th class="column6">Actions</th>');
                             print('</tr>');
 
@@ -48,10 +51,13 @@
                                     print('<td id="bDate-'. $index . '" class="column5">');
                                         print($fila['data_naixement']);
                                     print('</td>');
+                                    print('<td id="fCarrec-'. $index . '" class="column5">');
+                                        print($fila['funcio_carrec']);
+                                    print('</td>');
                                     print('<td id="actions-'. $index . '" class="column6">');
-                                        print('<i class="fas fa-address-card icons" style="padding: 5px;"></i>');
-                                        print('<i class="fas fa-briefcase icons" style="padding: 5px;"></i>');
-                                        print('<i class="fas fa-pen icons" style="padding: 5px;"></i>');
+                                        print('<i class="fas fa-address-card icons" data-toggle="modal" data-target="#cercaCNT" style="padding: 5px;"></i>');
+                                        print('<i class="fas fa-briefcase icons" data-toggle="modal" data-target="#cercaADV" style="padding: 5px;"></i>');
+                                        print('<i class="fas fa-pen icons" data-toggle="modal" data-target="#modificar" style="padding: 5px;"></i>');
                                         print('<i class="fas fa-times icons" style="padding: 5px;"></i>');
                                     print('</td>');
                                 print('</tr>');

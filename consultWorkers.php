@@ -57,10 +57,10 @@
 	<script src="js/bootstrap/bootstrap.min.js"></script>
 	<script src="js/select2/select2.min.js"></script>
 	<script src="js/mainTables.js"></script>
-    <script>
-        $("#contentCNT").load('workersContacte.php');
+    <!--<script>
+        $("#contentCNT").load('php/workersContacte.php');
 
-        $("#contentADV").load('workersAdvance.php');
-    </script>
+        $("#contentADV").load('php/workersAdvance.php');
+    </script>-->
 </body>
 </html>

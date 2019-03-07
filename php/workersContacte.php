@@ -1,6 +1,6 @@
 <?php
     include("connect.php");
-    $dni = $_POST['dniFocus'];
+    $dni = $_POST['dni'];
 
     if ($conexion) {
         $db = $conexion->select_db(DB_DATABASE);
@@ -10,7 +10,7 @@
             $resultado = $conexion->query($consulta);
             
             $index = 1;
-            $dniOld;
+            $dniOld = null;
 
                 print('<div class="table100 containerWorkers">');
 
