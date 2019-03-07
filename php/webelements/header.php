@@ -28,7 +28,7 @@
       <?php
       if($role == 1){
         echo '<li class="nav-item">
-          <a class="nav-link" href="#">Gestió usuaris</a>
+          <a class="nav-link" href="gestio.php">Gestió usuaris</a>
         </li>';
       }
       ?>
