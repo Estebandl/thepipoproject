@@ -1,6 +1,7 @@
 <?php
   session_start();
   $usuari = $_SESSION['usuari'];
+  $role = $_SESSION['role'];
 ?>
 
 <link rel="icon" type="image/png" href="img/icons/favicon.png"/>
@@ -11,7 +12,7 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-<img src="img/logo.png" style="height: 50px; padding-right: 10px;">
+<img src="img/logo.png" style="height: 50px; padding-right: 20px;">
   <a class="navbar-brand">Benvingut/da, <?php echo $usuari ?></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>

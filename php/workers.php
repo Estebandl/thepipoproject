@@ -56,8 +56,12 @@
                                     print('<td id="actions-'. $index . '" class="column6">');
                                         print('<i class="fas fa-address-card icons" data-toggle="modal" data-target="#cercaCNT" style="padding: 5px;"></i>');
                                         print('<i class="fas fa-briefcase icons" data-toggle="modal" data-target="#cercaADV" style="padding: 5px;"></i>');
-                                        print('<i class="fas fa-pen icons" data-toggle="modal" data-target="#modificar" style="padding: 5px;"></i>');
-                                        print('<i class="fas fa-times icons" style="padding: 5px;"></i>');
+
+                                        if($role == 1 || $role == 2){
+                                            print('<i class="fas fa-pen icons" data-toggle="modal" data-target="#modificar" style="padding: 5px;"></i>');
+                                            print('<i class="fas fa-times icons" style="padding: 5px;"></i>');
+                                        }
+
                                     print('</td>');
                                 print('</tr>');
                                 

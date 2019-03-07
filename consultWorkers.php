@@ -25,7 +25,13 @@
     <form role="form" method="post" action="consultWorkers.php" style="display: flex; justify-content: space-between; margin-top: 15px; padding: 25px;">
         <label style="margin-top: 8px;">Introdueix el DNI de l'empleat desitjat: <input type="text" name="dni" placeholder="DNI" style="border-radius: 25px; border: none !important; padding-left: 10px;"/></label>
         <input type="submit" name="consult" value="Buscar" class="send"/>
-        <button type="button" class="insertTo" data-toggle="modal" data-target="#insertar">Insertar Empleado</button>
+
+        <?php
+            if($role == 1 || $role == 2) {
+                echo '<button type="button" class="insertTo" data-toggle="modal" data-target="#insertar">Insertar Empleado</button>';
+            }
+        ?>
+        
         
     </form>
 
