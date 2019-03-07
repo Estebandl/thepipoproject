@@ -57,4 +57,5 @@ if ($conexion->query($sql) == FALSE || $conexion->query($sql2) == FALSE || $cone
 } else {
     echo 'Empleado añadido correctamente';
 }
+
 ?>

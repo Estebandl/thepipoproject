@@ -1,8 +1,8 @@
 <?php
 
         //include('connect.php');
-        //error_reporting(E_ALL ^ E_NOTICE);
-        $consulta = "SELECT * FROM `empleats` e, `telefons` t, `mails` m WHERE e.dni = t.dni_empleat AND e.dni = m.dni_empleat AND e.dni = " . "'". $conexion->real_escape_string($_POST['dni']) ."'";
+        error_reporting(E_ALL ^ E_NOTICE);
+        $consulta = "SELECT * FROM `empleats` e, `telefons` t, `mails` m WHERE e.dni = t.dni_empleat AND e.dni = m.dni_empleat AND dni = " . "'". $conexion->real_escape_string($_POST['dni']) ."'";
         $resultado = $conexion->query($consulta);
          while ($fila = $resultado->fetch_assoc()) {     
                 
