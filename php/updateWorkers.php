@@ -1,21 +1,10 @@
 <?php
+
         //include('connect.php');
         //error_reporting(E_ALL ^ E_NOTICE);
         $consulta = "SELECT * FROM `empleats` e, `telefons` t, `mails` m WHERE e.dni = t.dni_empleat AND e.dni = m.dni_empleat AND e.dni = " . "'". $conexion->real_escape_string($_POST['dni']) ."'";
         $resultado = $conexion->query($consulta);
-?>
-
-<!DOCTYPE html>
-<html>
-<head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Formulari d'actualització d'empleats</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
-</head>
-<body>
-        <?php while ($fila = $resultado->fetch_assoc()) {     
+         while ($fila = $resultado->fetch_assoc()) {     
                 
                 $nom = $fila['nom'];
                 $dni = $fila['dni'];
@@ -78,10 +67,9 @@
                 
                 <div id="modificar" class="modal fade" role="dialog">
                         <div class="modal-dialog">
-                                <div class = "container modal-content">
-                                <h1>Formulari d'actualització d'empleats</h1>
+                                <div class= "modal-content container">
                                         <div class="tablas">
-                                                <form role="form" method="post" action="updateWorkersData.php">
+                                                <form role="form" method="post" action="consultWorkers.php">
                                                 <label for="nom">Nom</label><br>
                                                 <input type="text" name="nom" value="<?php echo $nom ?>" readonly>
 
@@ -158,7 +146,7 @@
                                                 <input type="text" name="numeroSeguretatSocial" placeholder="" value="<?php echo $numeroSS ?>">
                                                 <br><br>
                                         </div>
-                                        <div class="tablas">   
+                                        <div class="tablas2" style="width:218px; height:631px;">   
                                                 <label for="area">Area asignada</label><br>
                                                 <input type="text" name="area" placeholder="" value="<?php echo $area ?>">
                                                 <br><br>
@@ -189,14 +177,16 @@
                                                 
                                                 <label for="funcioCarrec">Funció</label><br>
                                                 <input type="text" name="funcioCarrec" placeholder="" value="<?php echo $funcioCarrec ?>">
-                                                <br><br><br>
                                                 
-                                                <button type="submit" name="enviar" placeholder="enviar">Actualitzar informació empleat</button>
+                                                </div>
+                                               
+                                                <p style="text-indent: 100%;white-space: nowrap;overflow:hidden;">
+                texto oculto
+                </p>
+                                                <button type="submit" class="btn btn-success botonEnviar" names="enviar" value="enviar">Actualitzar informació</button>
 
                                                 </form>
-                                        </div>
+                                        
                                 </div>
                         </div>
                 </div>
-</body>
-</html>

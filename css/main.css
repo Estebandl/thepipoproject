@@ -93,7 +93,7 @@ table, td {
 }
 
 .modal-content {
-    width: 1100px !important;
+    width: 1200px !important;
     height: auto !important;
     display: inline-block !important;
 }
@@ -136,3 +136,8 @@ table, td {
     padding-right: 600px !important;
     padding-top: 50px; 
 }
+
+#modificar {
+        padding-right: 600px !important;
+        padding-top: 50px; 
+    }
