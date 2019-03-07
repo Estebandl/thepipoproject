@@ -35,65 +35,32 @@
 
         if (isset($_POST['consult'])) {
             if ($_POST['dni'] != null) {
+                include("php/connect.php");
                 include("php/workersFiltros.php");
+                include("php/close.php");
             } else {
+                include("php/connect.php");
                 include("php/workers.php");
+                include("php/close.php");
             }
         } else {
+            include("php/connect.php");
             include("php/workers.php");
+            include("php/close.php");
         }
+
+        include("php/modals.php");
     ?>
-
-    <!-- Modal -->
-    <div class="modal fade" id="cercaCNT" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="cercaCNTTitle">Modal title</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="modal-body">
-            <?php
-                include("php/workersContacte.php");
-            ?>
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-        </div>
-    </div>
-    </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="cercaADV" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="cercaADV">Modal title</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="modal-body">
-            <?php
-                //include("php/workersAdvance.php");
-            ?>
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-        </div>
-    </div>
-    </div>
 
     <script src="js/jquery/jquery-3.2.1.min.js"></script>
 	<script src="js/bootstrap/popper.js"></script>
 	<script src="js/bootstrap/bootstrap.min.js"></script>
 	<script src="js/select2/select2.min.js"></script>
 	<script src="js/mainTables.js"></script>
+    <script>
+        $("#contentCNT").load('workersContacte.php');
+
+        $("#contentADV").load('workersAdvance.php');
+    </script>
 </body>
 </html>

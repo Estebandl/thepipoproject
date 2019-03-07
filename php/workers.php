@@ -1,5 +1,4 @@
 <?php
-    include('php/connect.php');
     include('php/updateWorkers.php');
 
     if ($conexion) {
@@ -74,8 +73,6 @@
                     print('</table>');
 
                 print('</div>');
-
-            include('php/close.php');
 
         } else {
             print("Impossible connectar amb la base de dades.");

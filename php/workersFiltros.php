@@ -69,8 +69,6 @@
 
                 print('</div>');
 
-            include('php/close.php');
-
         } else {
             print("Impossible connectar amb la base de dades.");
         }

@@ -1,5 +1,5 @@
 <?php
-
+    include("connect.php");
     $dni = $_POST['dniFocus'];
 
     if ($conexion) {
@@ -47,6 +47,8 @@
                     print('</table>');
 
                 print('</div>');
+
+            include("close.php");
 
         } else {
             print("Impossible connectar amb la base de dades.");
