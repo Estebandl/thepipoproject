@@ -1,6 +1,4 @@
-function recollirUsuari() {
-	var userGuardat = localStorage.getItem('usuari');
-	document.getElementById('buscarUsuari').value = userGuardat;
+function logout() {
+	localStorage.setItem('usuari', '');
+	location.href = "php/webElements/destroy.php";
 }
-
-recollirUsuari();

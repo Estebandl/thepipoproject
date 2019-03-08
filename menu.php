@@ -14,18 +14,18 @@
 	</center></div>
 </body>
 
-	<script>
-		var usuari="";
-		if (localStorage.getItem('usuari')){
+<script>
+	var usuari="";
+	if (localStorage.getItem('usuari')){
+		usuari = localStorage.getItem('usuari');
+	} else {
+		if('<?php if(isset($_SESSION['usuari'])) echo $_SESSION['usuari'];?>'){
+			localStorage.setItem('usuari', '<?php if(isset($_SESSION['usuari'])) echo $_SESSION['usuari']?>');
 			usuari = localStorage.getItem('usuari');
 		} else {
-			if('<?php if(isset($_SESSION['usuari'])) echo $_SESSION['user'];?>'){
-				localStorage.setItem('usuari', '<?php if(isset($_SESSION['user'])) echo $_SESSION['user']?>');
-				usuari = localStorage.getItem('usuari');
-			} else {
-				location.href="index.php";
-			}
+			location.href="index.php";
 		}
-	</script>
+	}
+</script>
 
 </html>
