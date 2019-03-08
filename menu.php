@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>SAO Prat</title>
+	<title>SAO Prat - Inici</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 	
